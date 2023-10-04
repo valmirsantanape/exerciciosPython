@@ -1,10 +1,11 @@
 class Pessoa:
-    def __init__(self, nome, idade,):
+    def __init__(self, nome, idade):
         self.nome = nome
         self.idade = idade
     
     def falar(self, mensagem):
         print(f'{self.nome} diz: {mensagem}')
+
 
 class Funcionario(Pessoa):
     def __init__(self, nome, idade, salario):
@@ -12,10 +13,8 @@ class Funcionario(Pessoa):
         self.salario = salario
     
     def falar(self, mensagem):
-        print(f'{self.nome} diz: {mensagem} Estou no trabalho!')
+        print(f'{self.nome} diz: {mensagem} Estou no trabalho.')
 
 
-funcionaro1 = Funcionario('André', 30, 3800)
-print(funcionaro1.nome, funcionaro1.idade, funcionaro1.salario)
-
-funcionaro1.falar('Bom dia! ')
+funcionario = Funcionario('Antonio', 30, 50000)
+funcionario.falar('Bom dia! ')
